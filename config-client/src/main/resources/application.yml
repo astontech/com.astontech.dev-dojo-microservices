@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: config-client
+  profiles:
+    active: development
+  config:
+    import: optional:configserver:http://user:pass@localhost:8888
