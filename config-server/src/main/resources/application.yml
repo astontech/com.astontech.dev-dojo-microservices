@@ -10,6 +10,14 @@ spring:
           password: ${GIT_PASSWORD}
           uri: https://github.com/astontech/com.astontech.example-cloud-configs
           clone-on-start: true
+    bus:
+      enabled: true
+      id: config-server
+    stream:
+      kafka:
+        binder:
+          zkNodes: localhost:22181
+          brokers: localhost:29092
   security:
     user:
       name: user
