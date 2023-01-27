@@ -1,0 +1,8 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+      - id: aston_route
+        uri: https://astontech.com/
+        predicates:
+        - Path=/
