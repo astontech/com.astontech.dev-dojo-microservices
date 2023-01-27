@@ -1,0 +1,20 @@
+step 1:
+set up dynamic configs with spring cloud config, spring cloud bus, that automatically applies new configs as they're pushed to github
+
+step 2:
+set up gateway with spring cloud gateway that determines what services requests should be routed to
+
+step 3:
+implement circuit breaker to handle services going down
+
+step 4:
+implement container orchestration to scale the services
+
+step 4.5:
+service discovery
+
+step 5:
+implement load balancing to evenly distribute traffic across available services
+
+step 6: 
+implement rate limiting/load shedding to protect services from being overloaded

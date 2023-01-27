@@ -13,7 +13,12 @@ public class RouteConfig {
         return builder.routes()
                 .route(p -> p
                         .path("/")
-                        .filters(f -> f.addRequestHeader("Aston", "tech"))
+                        .filters(f -> f.addRequestHeader("Aston", "tech")
+                                .circuitBreaker(config -> config
+                                        .setName("aston_fallback")
+                                        .setFallbackUri("forward:/local-fallback-response")
+                                )
+                        )
                         .uri("https://astontech.com/"))
                 .build();
     }
