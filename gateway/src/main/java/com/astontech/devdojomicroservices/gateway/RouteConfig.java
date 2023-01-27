@@ -11,7 +11,7 @@ public class RouteConfig {
     @Bean
     public RouteLocator astonRoutes(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route(p -> p
+                .route("aston_route", r -> r
                         .path("/")
                         .filters(f -> f.addRequestHeader("Aston", "tech")
                                 .circuitBreaker(config -> config

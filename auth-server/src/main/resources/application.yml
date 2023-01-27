@@ -1,0 +1,9 @@
+server:
+  port: 8088
+
+spring:
+  ldap:
+    urls: ldap://10.1.249.105:389
+    base: dc=astontech,dc=com
+    username: ${LDAP_USERNAME}
+    password: ${LDAP_PASSWORD}
